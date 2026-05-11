@@ -229,7 +229,77 @@
      <div class="cursor-dot-outline"></div>
      <div class="cursor-dot"></div>
     <!-- Dynamic footer section -->
+<div class="loader-container" id="loader">
 
+    <div class="spanish-loader">
+
+        <!-- Center -->
+        <div class="center-text">
+            <span>Español</span>
+        </div>
+
+        <!-- Orbit 1 -->
+        <div class="orbit orbit-one">
+
+            <div class="element hola">
+                ¡Hola!
+            </div>
+
+            <div class="element dias">
+                Buenos días
+            </div>
+
+        </div>
+
+        <!-- Orbit 2 -->
+        <div class="orbit orbit-two">
+
+            <div class="element verb1">
+                -ar
+            </div>
+
+            <div class="element verb2">
+                -er
+            </div>
+
+        </div>
+
+        <!-- Orbit 3 -->
+        <div class="orbit orbit-three">
+
+            <div class="element noun1">
+                El · La
+            </div>
+
+            <div class="element noun2">
+                -ito · -ita
+            </div>
+
+        </div>
+
+        <!-- Floating Icons -->
+
+        <div class="emoji one">
+            💬
+        </div>
+
+        <div class="emoji two">
+            📖
+        </div>
+
+        <!-- Pencil -->
+
+        <div class="pencil left">
+            ✏️
+        </div>
+
+        <div class="pencil right">
+            ✏️
+        </div>
+
+    </div>
+
+</div>
     <!-- Scripts -->
 
     <!-- Google Analytics -->
@@ -262,6 +332,18 @@
         });
      </script>
          <script src="assets/js/experience.js"></script>
+	<script>window.addEventListener("load", () => {
+
+    const loader =
+    document.getElementById("loader");
+
+    document.body.classList.remove(
+        "no-scroll-preload"
+    );
+
+    loader.classList.add("disappear");
+
+});</script>
 
 </body>
 

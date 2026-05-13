@@ -1,3 +1,18 @@
+@font-face {
+   font-family: "Finger paint";
+   src: url("../fonts/");
+   font-weight: normal;
+   font-style: normal;
+
+}
+
+@font-face {
+   font-family: "Finger paint";
+   src: url("../fonts/");
+   font-weight: normal;
+   font-style: normal;
+
+}
 /*Declaration of CSS variables for light/dark theme*/
 
 html[data-theme="light"] {

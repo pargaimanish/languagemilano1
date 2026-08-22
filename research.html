@@ -1,359 +1,458 @@
 <!DOCTYPE html>
-<html lang="en" light-mode="dark">
-
+<html lang="en">
 <head>
-    <title>John Doe | Research</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="keywords" content="free portfolio template,portfolio template, portfolio website template, open source, open sourcing, contributing to open source" />
-    <meta name="description" content="This project serves free and beautiful portfolio template for everyone. The sole aim of this project is to help all those who are not sure or face difficulties while trying to create the perfect portfolio for themselves. Anyone can showcase their work including moocs, education, projects, experience,etc. to the world."
-    />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language milano — Spanish for the IB Diploma, Dubai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --paprika:#2A2A2A;
+    --gold:#6E6E6E;
+    --sand:#EBEBEB;
+    --teal:#4A4A4A;
+    --white:#FFFFFF;
+    --paper: #FAFAFA;
+    --line: rgba(20,20,20,0.14);
+    --radius: 6px;
+  }
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6D61F5TL4"></script>
-    <!-- Fetching our Google Tag Manager -->
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow, .stamp-code{
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+  }
+  a{ color:inherit; }
+  img,svg{ display:block; max-width:100%; }
+  .wrap{ max-width:1160px; margin:0 auto; padding:0 32px; }
+  section{ position:relative; }
 
-    <!-- Robot.txt -->
-    <meta name="robots" content="index,follow" />
-    <meta name="Googlebot" content="index,follow" />
-    <meta name="AdsBot-Google" content="index,follow" />
+  /* subtle Alhambra 8-point star tile pattern, used sparingly */
+  .tile-pattern{
+    background-image:
+      radial-gradient(circle at 0 0, transparent 9px, var(--line) 9.5px, var(--line) 10px, transparent 10.5px),
+      radial-gradient(circle at 40px 40px, transparent 9px, var(--line) 9.5px, var(--line) 10px, transparent 10.5px);
+    background-size:40px 40px;
+  }
 
-    <meta property="og:site_name" content="https://portfolio.smaranjitghose.codes/research.html">
-    <meta property="og:title" content="John Doe | Research">
-    <meta property="og:description" content="This project serves free and beautiful portfolio template for everyone. Anyone can showcase their work including moocs, education, projects, experience,etc. to the world.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://portfolio.smaranjitghose.codes/research.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="https://portfolio.smaranjitghose.codes/research.html">
+  :focus-visible{ outline:2px solid var(--paprika); outline-offset:3px; }
 
-    <meta name="application-name" content="John Doe | Research" />
-    <meta name="apple-mobile-web-app-title" content="John Doe | Research" />
-    <meta name="summary" content="An open source project aimed at providing free and beautiful templates to everyone for building their portfolio websites and showcase their work to the world." />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,236,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem;
+  }
+  .logo .mark{
+    width:30px; height:30px; flex-shrink:0;
+  }
+  nav.links{ display:flex; gap:30px; align-items:center; }
+  nav.links a{
+    text-decoration:none; font-size:0.92rem; font-weight:500; color:var(--ink);
+    opacity:0.75; transition:opacity .15s;
+  }
+  nav.links a:hover{ opacity:1; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Work Sans', sans-serif; font-weight:600; font-size:0.9rem;
+    padding:11px 20px; border-radius:999px; border:1px solid var(--ink);
+    text-decoration:none; cursor:pointer; background:none;
+  }
+  .btn-solid{ background:var(--paprika); border-color:var(--paprika); color:var(--white); }
+  .btn-solid:hover{ background:#98301F; }
+  .btn-ghost:hover{ background:var(--ink); color:var(--white); }
+  #menu-toggle{ display:none; }
+  .burger{ display:none; }
 
-    <!--Import animation.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link rel="stylesheet" href="assets/css/preloader.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/research.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/cursor.css">
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <link id='favicon' rel="icon" href="assets/images/favicon.png" type="image/png">
-    <!--Favicon-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!--For Dark/Light mode Toggle-->
-    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
-    <script defer src="./assets/js/dynamicTitle.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M11CMZ12Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  /* ---------- hero ---------- */
+  .hero{ padding:88px 0 60px; overflow:hidden; }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .hero .eyebrow{ color:var(--paprika); }
+  .hero h1{
+    font-size:clamp(2.4rem, 4.6vw, 3.6rem);
+    line-height:1.05;
+    margin-top:18px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--paprika); }
+  .hero p.lede{
+    max-width:46ch; margin-top:22px; font-size:1.08rem; color:rgba(27,42,68,0.78);
+  }
+  .hero-ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
 
-    gtag('config', 'G-M11CMZ12Q');
-  </script>
+  .stamp-cluster{ position:relative; height:380px; }
+  .stamp{
+    position:absolute; border-radius:50%; border:2px solid currentColor;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-family:'Space Mono', monospace; text-transform:uppercase;
+    letter-spacing:0.06em; padding:14px;
+    transform:rotate(var(--r, -8deg));
+    background:var(--paper);
+  }
+  .stamp::before{
+    content:""; position:absolute; inset:6px; border:1px dashed currentColor; border-radius:50%; opacity:0.6;
+  }
+  .stamp-1{ width:210px; height:210px; top:0; left:20px; color:var(--paprika); font-size:0.78rem; --r:-9deg; }
+  .stamp-2{ width:160px; height:160px; top:150px; right:10px; color:var(--teal); font-size:0.68rem; --r:7deg; }
+  .stamp-3{ width:130px; height:130px; bottom:0; left:80px; color:var(--gold); font-size:0.66rem; --r:4deg; }
+
+  /* ---------- ticker ---------- */
+  .ticker-band{
+    background:var(--ink); color:var(--sand); padding:14px 0; overflow:hidden;
+  }
+  .ticker-track{
+    display:flex; gap:48px; white-space:nowrap; width:max-content;
+    animation: scroll 26s linear infinite;
+    font-family:'Space Mono', monospace; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+  }
+  .ticker-track span{ opacity:0.85; }
+  @keyframes scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){ .ticker-track{ animation:none; } }
+
+  /* ---------- section headers ---------- */
+  .section-head{ max-width:56ch; margin-bottom:44px; }
+  .section-head .eyebrow{ color:var(--teal); }
+  .section-head h2{ font-size:clamp(1.7rem,3vw,2.3rem); margin-top:14px; }
+  .section-pad{ padding:96px 0; }
+  .divider{ border:none; border-top:1px solid var(--line); margin:0; }
+
+  /* ---------- programme cards (exam-paper styling) ---------- */
+  .paper-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+  }
+  .paper-card{
+    background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 22px; position:relative;
+  }
+  .paper-card .stamp-code{ color:var(--paprika); }
+  .paper-card h3{ font-size:1.15rem; margin-top:14px; }
+  .paper-card p{ margin:10px 0 0; font-size:0.9rem; color:rgba(27,42,68,0.72); }
+  .paper-card .tag{
+    position:absolute; top:22px; right:22px; font-family:'Space Mono',monospace;
+    font-size:0.68rem; color:var(--gold); border:1px solid var(--gold); border-radius:999px;
+    padding:3px 9px;
+  }
+
+  /* ---------- approach: three sessions ---------- */
+  .session-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+  .session{ padding:36px 30px; background:var(--white); border-left:1px solid var(--line); }
+  .session:first-child{ border-left:none; }
+  .session .roman{ font-family:'Fraunces',serif; font-size:2.4rem; color:var(--sand); -webkit-text-stroke:1.5px var(--paprika); color:transparent; line-height:1; }
+  .session h3{ margin-top:16px; font-size:1.15rem; }
+  .session p{ font-size:0.92rem; color:rgba(27,42,68,0.72); margin-top:10px; }
+
+  /* ---------- stats ---------- */
+  .stats-band{ background:var(--ink); color:var(--sand); }
+  .stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px; text-align:left; }
+  .stat b{ font-family:'Fraunces',serif; font-size:2.6rem; display:block; color:var(--white); }
+  .stat span{ font-size:0.86rem; opacity:0.75; }
+
+  /* ---------- testimonials (postcards) ---------- */
+  .postcards{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .postcard{
+    background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; position:relative;
+  }
+  .postcard::after{
+    content:"✈"; position:absolute; top:22px; right:22px; color:var(--teal); font-size:1.1rem; opacity:0.7;
+  }
+  .postcard p.quote{ font-family:'Fraunces',serif; font-style:italic; font-size:1.05rem; line-height:1.5; }
+  .postcard .who{ margin-top:18px; font-size:0.84rem; color:rgba(27,42,68,0.65); font-family:'Space Mono',monospace; }
+
+  /* ---------- contact ---------- */
+  .contact-band{ background:var(--sand); }
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+  .contact-info .eyebrow{ color:var(--paprika); }
+  .contact-info h2{ margin-top:14px; font-size:clamp(1.7rem,3vw,2.2rem); }
+  .contact-info p{ margin-top:16px; max-width:42ch; color:rgba(27,42,68,0.78); }
+  .contact-detail{ margin-top:28px; font-size:0.92rem; }
+  .contact-detail div{ margin-bottom:10px; }
+  .contact-detail .label{ font-family:'Space Mono',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); display:block; }
+
+  form{ background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:32px; }
+  .field{ margin-bottom:18px; }
+  .field label{ display:block; font-size:0.82rem; margin-bottom:6px; font-weight:500; }
+  .field input, .field select, .field textarea{
+    width:100%; padding:11px 13px; border:1px solid var(--line); border-radius:4px;
+    font-family:'Work Sans', sans-serif; font-size:0.95rem; background:var(--paper); color:var(--ink);
+  }
+  .field textarea{ min-height:90px; resize:vertical; }
+  form .btn-solid{ width:100%; justify-content:center; margin-top:6px; }
+
+  footer{ padding:40px 0; border-top:1px solid var(--line); }
+  .foot-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .foot-row p{ font-size:0.82rem; color:rgba(27,42,68,0.6); margin:0; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{ grid-template-columns:1fr; }
+    .stamp-cluster{ height:280px; margin-top:10px; }
+    .paper-grid{ grid-template-columns:repeat(2,1fr); }
+    .session-row{ grid-template-columns:1fr; }
+    .session{ border-left:none; border-top:1px solid var(--line); }
+    .session:first-child{ border-top:none; }
+    .stats-grid{ grid-template-columns:repeat(2,1fr); }
+    .postcards{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    nav.links{ display:none; }
+  }
+  @media (max-width:560px){
+    .wrap{ padding:0 20px; }
+    .paper-grid{ grid-template-columns:1fr; }
+    .stats-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
 </head>
+<body>
 
-<body class="no-scroll-preload">
-
-    <!-- loader -->
-    <div class="loader-container">
-        <div class="atom">
-            <div class="electron"></div>
-            <div class="electron-alpha"></div>
-            <div class="electron-omega"></div>
-        </div>
-   </div>
-
-    <!--Dynamic Nav Bar-->
-
-    <div class="container research-upper pt-5" style="width: 100%; min-height: 80%;">
-        <section class="txt-bottom">
-            <div class="px-3 pt-5">
-                <div class="row">
-                    <div class="col-md-6 d-flex mt-5 flex-column text-center justify-content-center animate__animated animate__zoomIn animate__delay-1s">
-                        <h2 class="main-heading mb-0 head-upper research_head">Research <span class="research_work">Work</span></h2>
-                        <p class="pre-heading p-upper font-weight-bolder" class="mb-0 mt-3 text-center animate__animated animate__zoomIn animate__delay-2s">
-                            My area of interests are AI, Blockchain, Machine Learning and Computer Vision.
-                        </p>
-                    </div>
-
-                    <div class="col-md-6" style="margin-top: 45px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="verapc" width="100%" baseProfile="tiny" class="svgmate" version="1" viewBox="800 300 1220 1080">
-                <g id="_L3_x5F_Frame-Plant-STable">
-                  <g id="_x3C_Group_x5F_FRAME_x3E_" class="framedropin"
-                    style="animation-name:veradropin;animation-iteration-count:1;animation-duration:.9s;animation-timing-function:ease-in-out">
-                  </g>
-                </g>
-                <path id="Layer_13" fill="#FFF"
-                  d="M126 1080c120-147 255-180 420-327 92-82 222-432 510-522s708 165 864 171 3-432 3-432L-23-28l-16 1109 165-1z"
-                  class="shapecut"
-                  style="animation-name:shapemask;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:5s">
-                </path>
-                <g class="plantsscalein"
-                  style="animation-name:verascalein;animation-iteration-count:1;animation-duration:1.5s;animation-timing-function:ease-in-out;transform-origin:1907.25px 884.25px">
-                  <path fill="#355469"
-                    d="M1891 858s-6-28-8-52c-2-23-6-61-31-94-15-19-14-56-15-74 0-32-19-55-26-71s-10-32-12-40-6-27-14 10 4 87 17 112c18 38-3 91 20 135 13 23 30 30 41 32s14 3 17 13l8 29h3z"
-                    class="plant p2" style="animation-duration:8s"></path>
-                  <path fill="#bb86fc"
-                    d="M1852 850s-49-48-57-70c-13-35-35-79-85-147-24-32-70-38-85-45-19-9-38-24-43-30-4-6-23-23-3 19 16 35 62 46 83 64 47 40 30 73 62 115 13 17 27 29 53 34 11 2 20 6 29 16 16 16 16 16 37 44h9z"
-                    class="plant p3" style="animation-duration:3.6s"></path>
-                  <path fill="#17354C"
-                    d="M1883 858s-4-50-82-155-106-145-115-153-26-21-13 17c15 47 3 63 23 88l69 90c36 46 78 79 93 80 6 0 9 5 11 8 5 9 10 25 10 25h4z"
-                    class="plant p4" style="animation-duration:4.8s"></path>
-                  <path fill="#17354C"
-                    d="M1852 850s-49-48-57-70c-13-35-82-82-97-91-37-23-55-46-60-52-12-15-31-37-22 16 6 34 40 70 62 88 47 40 73 44 99 49 11 2 20 6 29 16 16 16 16 16 37 44h9z"
-                    class="plant p5" style="animation-duration:5.6s"></path>
-                </g>
-                <g class="peopletableslide"
-                  style="animation-name:veraslidein;animation-iteration-count:1;animation-duration:1s;animation-timing-function:ease-in-out;transform:translateX(45px)">
-
-
-                  <g id="L5_x5F_Human_x5F_Woman">
-                    <path id="_x3C_Path_x5F_WArm_x5F_back_x3E_" fill="#F68E5A" d="M1532 830s-10-81-32-113l-28 29 38 84h22z">
-                    </path>
-                    <g id="_x3C_Group_x5F_WShirt_x3E_">
-                      <path id="_x3C_Path_x5F_Shirt_x5F_middle_x3E__1_" fill="#355469"
-                        d="M1228 694s38-53 137-61c0 0 66-4 105 29l48 43s4 5-2 13c-3 4-8 3-10 6-6 6-3 9-10 16-4 3-8 1-12 10l-30 57c-9 17-17 25-38 26s-61 12-79 18c-21 6-91-7-95-45l-14-112z">
-                      </path>
-                      <path id="_x3C_Path_x5F_Shirt_x5F_top_x3E_" fill="#17354C"
-                        d="M1234 739l-6-45s38-53 137-61c0 0 66-4 105 29l40 35s-1 7-10 8-14-6-18-2c-5 4 9 15 0 22s-19-7-28-2 0 12-10 19c-8 6-27-14-35-9s-2 22-12 25c-7 3-25-17-32-15s-1 27-12 28-12-22-25-22-12 21-23 18c-10-4-2-30-13-34-8-3-15 18-23 17s-1-22-9-24-26 13-26 13z">
-                      </path>
-                      <path id="_x3C_Group_x5F_Shirt_x5F_bottom_x3E_" fill="#2A475D"
-                        d="M1489 833l-30-36-5 9c-9 18-17 26-38 27s-61 12-79 18c-10 3-31 1-51-5l-1 50c71-38 143-55 203-63h1z">
-                      </path>
-                    </g>
-                    <g id="_x3C_Group_x5F_Face_x5F_Woman_x3E_">
-                      <path id="_x3C_Path_x5F_WNeck_x3E_" fill="#F68E5A"
-                        d="M1327 630s-5 6-1 13c4 8 31 55 32 59 1 3 6 13 10 4s11-58 11-58-18 15-52-18z"></path>
-                      <path id="_x3C_Path_x5F_WFace_x5F_Shape_x3E_" fill="#F89F71"
-                        d="M1313 606s18 47 54 47c26 0 38-32 38-50v-37h-92v40z"></path>
-                      <path id="_x3C_Path_x5F_WHair_x3E_" fill="#585268"
-                        d="M1356 511c-17-1-32 8-44 23-8 10-26 4-25 38 1 10 4 6 4 15-1 9-7 12-7 21s5 40 28 35c20-5 16-17 16-21s-1-6-6-10-5-8-3-10 5-1 7 1 4 4 5-3-4-19 4-16 17 11 40 10 29-13 30-16v27l-2 15s9-1 22-19c7-9 3-17 1-23 0 0-15-25-15-32s-15-31-55-35z">
-                      </path>
-                      <g id="_x3C_Group_x5F_WEyes_x3E_" fill="#2C5169">
-                        <path d="M1390 610h7c3 0 4-2 2-3-4-3-9 3-9 3zM1356 612h9c3 0 4-2 3-3-5-3-12 3-12 3z"></path>
-                      </g>
-                      <path id="_x3C_Path_x5F_WNose_x3E_" fill="#F68D59" d="M1383 609c0 2 3 21-4 21s-6-9-3-15 6-13 7-6z">
-                      </path>
-                      <path id="_x3C_Path_x5F_WMouth_x3E_" fill="#F5845F" d="M1373 643c4 0 7-2 8-3s-3-2-8-2-10-1-7 2c2 2 5 3 7 3z">
-                      </path>
-                    </g>
-
-                    <g class="specrotate"
-                      style="animation-name:armright;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:7.5s;animation-delay:2s;transform-origin:1519px 874.7px">
-                      <g id="_x3C_Group_x5F_WGlasses_x3E_">
-                        <path fill="#F9B4A7"
-                          d="M1346 726h-1c0-1-19-39-23-44l-2-2c-3 0-6 2-8 3h-1v-1c1-1 5-4 9-4l4 3 23 44a1 1 0 0 1-1 1zM1398 702h-1a1362 1362 0 0 0-26-48c-3 0-6 2-7 3h-2v-1c1-1 5-4 9-4l4 3a1300 1300 0 0 1 23 47z">
-                        </path>
-                        <path fill="#F9B4A7"
-                          d="M1398 703h2v2c-3 4-10 8-16 8h-1l-3-1c0-1 2-4 6-6l12-3m0-2c-4 0-9 1-12 3-8 3-12 10-3 11h1c8 0 20-8 18-12-1-2-2-2-4-2zM1364 719h2v2c-3 4-10 8-16 8h-1l-3-1c0-1 2-4 6-6l12-3m0-2c-4 0-9 1-12 3-8 3-12 10-3 11h1c8 0 20-8 18-12-1-2-2-2-4-2z">
-                        </path>
-                        <path fill="#F9B4A7" d="M1368 719l-2-1c4-5 9-6 13-6v2c-3 0-8 1-11 5z"></path>
-                      </g>
-                      <path id="_x3C_Path_x5F_WArm_x3E__1_" fill="#F89F71"
-                        d="M1393 649c-8 1-18 1-24 10s-10 21-5 22c7 1 5-7 8-9 3-3 15-10 11-2-2 4-2 7-2 9s3 3 5-2c3-6 9-6 13-6s8 0 11 10 19 83 33 116c25 59 52 73 62 77 19 6 25-8 25-8s12-35-19-79c-24-34-40-68-58-89s-23-29-27-34-13-16-33-15z">
-                      </path>
-                    </g>
-                  </g>
-                  <g id="L5_x5F_Human_x5F_Man">
-                    <path id="sholderforman" fill="#bb86fc" d="M1163 622c58 28 85 38 82 193s-26 123-42 114-40-307-40-307z">
-                    </path>
-                    <path fill="#FDE6E1" d="M1175 682l10 12c1-2-1-16-5-16s-5 4-5 4z"></path>
-                    <path fill="#F68F5B" d="M1161 617l-8 13c-1 3-5 5 2 16s6 12 6 12h-61s-5-29-5-49c0-8 19-38 22-42 0 0 21 48 44 50z">
-                    </path>
-                    <path fill="#17354C" d="M1114 650s15 6 23 5 20-17 20-17 17 36 27 83 16 96 0 242l-93 73 23-386z"></path>
-
-                    <path fill="#FFF"
-                      d="M1122 707c-5-9-8-29-24-49s-26-34-22-42 12-12 22-16c-3 7-5 13-2 20 8 18 29 41 49 61 14 14 6 34 6 34 0-14-3-36-15-15-4 7-5 25-14 7z">
-                    </path>
-                    <path fill="#FFF5F3" d="M1156 624l-4 8c-1 1-3 4 2 12s15 28 21 55c0-9 0-20 3-21s7 6 8 16c2-1 2-9-6-26l-24-44z">
-                    </path>
-
-                    <g id="_x3C_Group_x5F_Mouse_x3E_" class="arm">
-                      <path fill="#d3b4f8" d="M1363 1051c-6 6-17 11-36 10s-54 1-46-17 16-18 59-15c13 0 41 4 23 22z">
-                      </path>
-                      <path fill="#F3726C" d="M1353 1037c-11-7-24-5-14 0s24 6 14 0z"></path>
-                    </g>
-                    <g id="_x3C_Group_x5F_ManSleeve_x3E_" class="sleave"
-                      style="animation-name:sleave;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:5s;transform-origin:1009.149px 711.625px">
-                      <path id="_x3C_Path_x5F_WhiteSleeve_x3E_" fill="#bb86fc"
-                        d="M1084 712c-9-22-26-58-65-58s-97 56-97 183 1 211 45 213c7 0 14-9 26-17 25-19 60-40 64-47 6-10 7-36 6-56s6-107 18-136 13-60 3-82z">
-                      </path>
-                      <path id="_x3C_Path_x5F_WhiteSleeve_x5F_Shadow_x3E_" fill="#bb86fc"
-                        d="M994 1023s-21 18-31 18-13-10-13-17c2-20 46-76 113-78 0 0-36 49-69 77z"></path>
-                    </g>
-                    <g id="_x3C_Group_x5F_ManArm_x3E_" class="arm">
-                      <path fill="#F89F71"
-                        d="M1347 1034l-15-20c-3-5-8-10-25-6s-37 10-51 5-172-62-186-64-30-4-62 13-54 36-40 47 41 23 97 26 155 12 175 13 22-3 30-2l11 2c5 0 17-14 25-14s14 6 18 9 8 3 4-2-10-11 3-1c2 2 5 4 11 3s18 1 5-9z">
-                      </path>
-                      <path fill="#F79463"
-                        d="M1024 954l-16 8c-32 18-54 36-40 47s41 23 97 26 155 12 175 13c0 0-23-22-66-22s-84-13-104-22-35-18-46-50z">
-                      </path>
-                    </g>
-                    <g class="armright"
-                      style="animation-name:armright;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-duration:10s;transform-origin:1243px 961.5px">
-                      <path id="_x3C_Path_x5F_ArmRight_x3E_" fill="#F89F71"
-                        d="M1267 686c-5 22-106 264-24 276 54 7 58-146 53-260-1-15-1-18 4-29s11-26 4-38-11-17-16-21-7-7-13 10c-2-5-8-14-15-17-5-3-4 4-1 7s5 12 5 24 0 25 3 30 2 8 0 18z">
-                      </path>
-                      <path id="_x3C_Path_x5F_HandShadow_x3E_" fill="#F68F5B"
-                        d="M1303 660s-4 5-11 5-20-6-21-21c0-6 2-11 3-10s5 16 9 19 6 0 9 3 4 5 11 4z"></path>
-                      <g id="_x3C_Group_x5F_Pencil_x5F_Front_x3E_">
-                        <path fill="#F9B4A7" d="M1344 683c-5-12-28-25-37-32l-2 8c6 4 29 23 39 24z"></path>
-                        <path fill="#FEEEE8" d="M1344 683l-9-11-5 5c5 3 10 6 14 6z"></path>
-                        <path fill="#F26D57" d="M1344 683l-3-4-2 3 5 1z"></path>
-                      </g>
-                      <g id="_x3C_Group_x5F_Pencil_x5F_Back_x3E_">
-                        <path fill="#F26D57" d="M1246 610c1-2 2-1 3-1l-7-5h-4c-2 1-1 4 0 5l7 4 1-3z"></path>
-                        <path fill="#F9B4A7" d="M1274 627l-24-18s-3-1-4 1v4l27 19 1-6z"></path>
-                      </g>
-                    </g>
-                    <g id="_x3C_Group_x5F_Man_x5F_Face_x3E_" class="manhead"
-                      style="animation-name:head;animation-timing-function:ease-in-out;transform-origin:1117.293px 580.5px;animation-iteration-count:infinite;animation-duration:5s">
-                      <path fill="#F89F71" d="M1212 508c14 8 27 26 8 72s-45 63-77 28-33-55-8-89c24-34 47-29 77-11z">
-                      </path>
-                      <path id="_x3C_Path_x5F_Snor_x3E_" fill="#585268"
-                        d="M1215 603c2-2 3-7-2-10s-8 1-11 4-7 4-10 4-8 3-1 4 20 4 24-2z"></path>
-                      <path fill="#585268"
-                        d="M1175 557c0-12 10-16 5-23s-9-14-12-16-6-10 6-10 36 14 47 11 20-10 3-20-52-35-91-24c-12 4-16 12-17 15s-11 0-15 9-15 51-4 76c4 11 6 18 22 17 11-2 12 5 29-14 6-6 7-11 10-17 2-5 17-4 17-4z">
-                      </path>
-                      <path id="_x3C_Path_x5F_Nose_x3E_" fill="#F68E5A" d="M1219 569s-11 10-11 18 9 8 11 1 2-14 0-19z">
-                      </path>
-                      <g id="_x3C_Group_x5F_Glasses_x3E_">
-                        <path fill="#F26A56"
-                          d="M1209 551c-7 0-14 10-14 18s5 11 8 11 14-3 14-18c0-4-1-11-8-11zm-5 25c-3 0-5-1-5-7 0-9 6-14 10-14 2 0 5 0 5 7 0 8-7 14-10 14z">
-                        </path>
-                        <path fill="#F26D57"
-                          d="M1231 558c-3 0-7 3-11 9s-2 15 2 17c5 2 15-5 15-19 0-4-2-7-6-7zm-6 23c-2 0-3-3-3-5 0-7 6-14 9-14 1 0 2 1 2 4 0 7-5 15-8 15z">
-                        </path>
-                        <path fill="#F26A56"
-                          d="M1156 561l3-5c2-3 6-1 8-1l30 9v4l-28-9c-2-1-6-2-8 0l-3 4c-1 2-3 0-2-2zM1216 568h5l-1 3h-5z">
-                        </path>
-                      </g>
-                      <path id="_x3C_Path_x5F_Beard-TOP_x3E_" fill="#585268"
-                        d="M1166 602c-4 0-9 0-12 5s-6 11 5 16 13 9 17 15 13 13 22-2 10-24 8-27c0 0-4 4-12 5-9 1-20-11-28-12z">
-                      </path>
-                    </g>
-                  </g>
-                </g>
-                <g class="stuffontable">
-                  <g id="L4_x5F_ScreenLamp" class="screenlamp"
-                    style="animation-name:veraslidein;animation-iteration-count:1;animation-duration:1.39s;animation-timing-function:ease-in-out;transform:translateX(45px)">
-                    <path fill="#bb86fc" d="M1823 958l41-366-187-272 3-9 194 281-41 366z"></path>
-                    <path fill="#bb86fc" d="M1681 464c-2 3-24 2-61-11-32-11-57-26-55-31 2-4 32-1 63 11 34 12 55 26 53 31z">
-                    </path>
-                    <ellipse cx="1868" cy="596" fill="#FFF" rx="9" ry="9"></ellipse>
-                    <ellipse cx="1868" cy="596" fill="#F15E59" rx="4" ry="4"></ellipse>
-                    <path fill="#bb86fc" d="M1628 433l-8 20c37 13 59 14 61 11 2-5-19-19-53-31"></path>
-                    <path fill="#FEEBE8" d="M1618 430s-2 10 3 14 9 4 17-7c0 0-7-5-20-7z"></path>
-                    <path fill="#dfd0f3"
-                      d="M1680 344c-4-9 1-32 8-45 4-7 0-14-7-17-9-4-16 0-20 10s-6 31-25 41c-19 11-38 21-52 48s-19 42-19 42c2-5 32-2 63 10 34 12 55 26 53 31 0 0 10-33 11-48s4-25-12-72z">
-                    </path>
-                    <path fill="#d3baf3"
-                      d="M1621 430l7 3c33 12 55 26 53 31 0 0 10-33 11-48s4-25-12-72c-4-9 1-32 8-45 4-7 0-14-7-17-9-4-16 0-20 10l-4 13s4 24 2 32c-4 14-28 10-36 56-3 14-2 37-2 37z">
-                    </path>
-                    <g id="_x3C_Group_x5F_SCREEN_x3E_">
-                      <path fill="#FFF"
-                        d="M1715 939c-5-5-41-60-47-70s-3-18-2-25l36-253c2-10 3-10 12-12 24-1 67 3 67 3 5 2 10 4 10 13-2 37-7 112-14 162a1897 1897 0 0 1-34 165c-6 22-8 24-15 26-4 2-10-5-13-9z">
-                      </path>
-                      <path fill="#FEE6DF"
-                        d="M1820 955l-42-149-16 67-19 60c-5 16-11 15-15 15 7-2 9-4 15-26 10-37 23-104 30-144 9-48 15-141 18-183 0-8-5-11-10-13 7 0 14 3 14 20 1 37-4 110-12 167l50 186h-13z">
-                      </path>
-                      <path fill="#bb86fc" d="M1778 600l-71-8-30 215 61 71s15-66 24-121c16-89 16-157 16-157z"></path>
-                      <path fill="#bb86fc" d="M1931 1000c0 12-43 32-104 32-43 0-118-18-118-40 0-17 51-39 116-39 35 0 106 32 106 47z">
-                      </path>
-                      <path fill="purple" d="M1706 607l2-15 71 8-1 18-72-11z"></path>
-
-                      <path fill="#FDE6E3"
-                        d="M1701 719l18 9-5 39-19-12zM1731 733l18 9-8 45-17-13zM1740 648l20 4-5 34-19-5zM1709 640l21 5-5 33-19-6z">
-                      </path>
-                      <ellipse cx="1713" cy="601" fill="#FEF5F5" rx="1" ry="3"></ellipse>
-                      <ellipse cx="1717" cy="602" fill="#FEF5F5" rx="1" ry="3"></ellipse>
-                      <path fill="#c2bff5" d="M1702 860c0 3-1 5-3 6-1 0-2-2-2-5s2-5 3-5c2-1 3 1 2 4z"></path>
-                      <path fill="#FDDFDB" d="M1851 963c0 5-10 9-23 9s-23-8-23-13c0-6 10-10 23-10s23 8 23 14z"></path>
-                    </g>
-                  </g>
-                  <g id="L4_x5F_Keyboard" class="keyboard"
-                    style="animation-name:veraslidein;animation-iteration-count:1;animation-duration:1.37s;animation-timing-function:ease-in-out;transform:translateX(45px)">
-                    <path fill="#FFF"
-                      d="M1574 913c6 0 13-1 20 11l43 85c4 7 5 13-7 17s-91 15-98 17-18 1-23-14-22-95-23-103 1-13 17-13h71z">
-                    </path>
-                    <path fill="#FDDFDB"
-                      d="M1511 1020a3001 3001 0 0 1-24-103c-2 2-2 5-2 9 2 8 19 87 24 103s16 15 23 14 86-13 98-17c6-2 9-5 9-8-12 4-98 15-105 16s-19 2-23-14z">
-                    </path>
-                    <path fill="#d3b4f8"
-                      d="M1560 922c4 0 8 0 13 7l30 66c3 4 1 11-7 13l-61 9c-5 0-12 1-15-10l-19-77c-2-8-2-9 13-9l46 1z">
-                    </path>
-
-                  </g>
-                  <g id="L4_x5F_Cup" class="coffee"
-                    style="animation-name:veraslidein;animation-iteration-count:1;animation-duration:1.3s;animation-timing-function:ease-in-out;transform:translateX(45px)">
-                    <path fill="#dfd0f3"
-                      d="M1339 900l-6-2 2-21h-54c0 1 9 64 17 84 3 8 6 11 13 11s10-4 12-11l3-15c9 0 10-3 11-6l7-28c2-10-3-11-5-12zm1 9l-7 30c-1 2-4 2-6 2l6-39 4 1c4 2 3 4 3 6z">
-                    </path>
-                    <ellipse cx="1308" cy="877" fill="#bb86fc" rx="27" ry="10"></ellipse>
-                    <path fill="#2A475D" d="M1330 883c-5 2-13 4-22 4-8 0-15-1-20-3-4-2 5-6 20-6s25 3 22 5z"></path>
-                    <g id="_x3C_Group_x5F_Cup_x5F_Steam_x3E_">
-                      <path fill="#FFF5F3" d="M1308 862c2 0 9-5 9-16s-1-19-6-26-8-21-9-9c0 8 3 10 3 16-1 5-6 16-6 22s3 13 9 13z"
-                        class="steam ste1" style="animation-duration:4s"></path>
-                      <path fill="#FFF5F3" d="M1326 851c1 3-2 12-5 8-2-2 2-5 1-8-2-7 0-13 4 0z" class="steam ste2"
-                        style="animation-duration:4.8s"></path>
-                    </g>
-                  </g>
-                  <g id="L_x3F__x5F_PencilBox_x5F_TopLayer" class="pencils"
-                    style="animation-name:veraslidein;animation-iteration-count:1;animation-duration:1.3s;animation-timing-function:ease-in-out;transform:translateX(45px)">
-                    <path fill="#FFF" d="M1657 1080s-6-53-4-72h120c0 38-4 72-4 72h-112z"></path>
-                    <ellipse cx="1713" cy="1008" fill="#d3b4f8" rx="60" ry="22"></ellipse>
-                    <g id="_x3C_Group_x5F_PencilPink_x3E_">
-                      <path fill="#F8AFA3" d="M1671 932s-6-1-8 3l-4-13c2-4 8-3 8-3l4 13"></path>
-                      <path fill="#FDDFDB" d="M1702 1029l-31-97s-6-1-8 3l30 93 9 1z"></path>
-                    </g>
-                    <g id="_x3C_Group_x5F_PencilBlue_x3E_">
-                      <g fill="#17354C">
-                        <path d="M1696 930v-1M1683 916c5-6 9 0 9 0l4 13c-1 0-6-2-10 1l-3-14z"></path>
-                      </g>
-                      <path fill="#F8AFA3" d="M1719 1029l-23-99s-6-3-10 0l22 99h11z"></path>
-                    </g>
-                  </g>
-                </g>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="researchMainWrapper">
-            <div class="container">
-                <div class="researchDetails">
-                    <table id="researchDetailsTable">
-                        <tbody class="main">
-                            <!--Fetch data from research.js-->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+<header>
+  <div class="wrap nav-row">
+    <div class="logo">
+      <svg class="mark" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="8" fill="#141414"/>
+        <path d="M20 6 L26 14 L20 22 L14 14 Z" fill="#FAFAFA"/>
+        <path d="M20 18 L26 26 L20 34 L14 26 Z" fill="#8A8A8A"/>
+      </svg>
+      Habla IB
     </div>
+    <nav class="links">
+      <a href="#teacher">Your teacher</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#approach">Approach</a>
+      <a href="#stories">Stories</a>
+      <a href="https://wa.me/918076319274" target="_blank" rel="noopener" class="btn btn-solid" style="padding:9px 18px;">Book a trial class</a>
+    </nav>
+  </div>
+</header>
 
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Spanish · IB MYP &amp; DP · Live online to Dubai</span>
+      <h1>Fluent en español.<br>Ready for <em>the exam.</em></h1>
+      <p class="lede">One-to-one Spanish tuition with Nishita Chauhan, taught live over Zoom to IB students across Dubai — built around your actual syllabus, your actual school, and the paper you'll sit in May or November.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/918076319274" target="_blank" rel="noopener" class="btn btn-solid">Book a trial class</a>
+        <a href="#teacher" class="btn btn-ghost">Meet your teacher</a>
+      </div>
+    </div>
+    <div class="stamp-cluster" aria-hidden="true">
+      <div class="stamp stamp-1">9 yrs<br>teaching<br>IB Spanish</div>
+      <div class="stamp stamp-2">MYP<br>Phases 1–6</div>
+      <div class="stamp stamp-3">Live<br>via Zoom<br>to Dubai</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-band" aria-hidden="true">
+  <div class="ticker-track">
+    <span>MYP Language Acquisition, Phases 1–6</span>
+    <span>DP Spanish Ab Initio</span>
+    <span>DP Spanish B, SL &amp; HL</span>
+    <span>DP Spanish A: Language &amp; Literature</span>
+    <span>Individual Oral prep</span>
+    <span>Paper 1 · Paper 2 · IA</span>
+    <span>MYP Language Acquisition, Phases 1–6</span>
+    <span>DP Spanish Ab Initio</span>
+    <span>DP Spanish B, SL &amp; HL</span>
+    <span>DP Spanish A: Language &amp; Literature</span>
+    <span>Individual Oral prep</span>
+    <span>Paper 1 · Paper 2 · IA</span>
+  </div>
+</div>
+
+<section class="section-pad" id="teacher">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Meet your teacher</span>
+      <h2>Nishita Chauhan</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:200px 1fr; gap:40px; align-items:start;">
+      <div style="width:180px; height:180px; border-radius:50%; overflow:hidden; border:2px solid var(--ink); flex-shrink:0;">
+        <img src="teacher.jpg" alt="Nishita Chauhan, Spanish teacher" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; filter:grayscale(1) contrast(1.05);">
+      </div>
+      <div>
+        <p style="max-width:60ch; font-size:1.02rem;">Nishita has spent close to a decade teaching Spanish to school and college students, working professionals, and hobby learners alike, with a particular focus on students following the IB, CBSE, AP, ICSE, IGCSE and HKDSE curricula. She holds a B.Com from Delhi University and teaches in Hindi, English and Spanish, currently based in Noida, India, and working with students online via Zoom worldwide — including families in Dubai preparing for MYP and DP exam sessions.</p>
+        <p style="max-width:60ch; font-size:1.02rem; margin-top:14px;">Her approach centres on pairing language instruction with Spanish culture, so students build genuine comfort with the language rather than memorising it for a single paper. She has prepared students from schools including Delhi Public School, Shiv Nadar School, GD Goenka, Pathways School Noida, Modern School and Bangalore International School, and rates 4.9 out of 5 across her tutoring reviews.</p>
+        <div style="display:flex; gap:28px; margin-top:24px; flex-wrap:wrap;">
+          <div><span class="stamp-code" style="color:var(--paprika);">Experience</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">9 years</div></div>
+          <div><span class="stamp-code" style="color:var(--paprika);">Levels</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">A1 – C2</div></div>
+          <div><span class="stamp-code" style="color:var(--paprika);">Rating</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">4.9 / 5</div></div>
+          <div><span class="stamp-code" style="color:var(--paprika);">Delivery</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">Live, via Zoom</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section-pad" id="programmes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">01 — The syllabus, decoded</span>
+      <h2>Every IB Spanish component, covered on its own terms.</h2>
+    </div>
+    <div class="paper-grid">
+      <div class="paper-card">
+        <span class="tag">SL / HL</span>
+        <span class="stamp-code">Paper 1</span>
+        <h3>Receptive skills</h3>
+        <p>Reading and listening comprehension across the five IB themes, drilled with real past-paper texts.</p>
+      </div>
+      <div class="paper-card">
+        <span class="tag">SL / HL</span>
+        <span class="stamp-code">Paper 2</span>
+        <h3>Productive writing</h3>
+        <p>Text-type mastery — blogs, formal letters, essays — matched to the command terms examiners actually use.</p>
+      </div>
+      <div class="paper-card">
+        <span class="tag">All levels</span>
+        <span class="stamp-code">IO</span>
+        <h3>Individual Oral</h3>
+        <p>Stimulus analysis and conversation practice until spontaneous speech stops feeling rehearsed.</p>
+      </div>
+      <div class="paper-card">
+        <span class="tag">Ab Initio</span>
+        <span class="stamp-code">Foundations</span>
+        <h3>From zero to confident</h3>
+        <p>Structured grammar and vocabulary building for students starting Spanish with no prior study.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section-pad tile-pattern" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">02 — How the sessions work</span>
+      <h2>A method built like the exam itself: three passes, not one long grind.</h2>
+    </div>
+    <div class="session-row">
+      <div class="session">
+        <span class="roman">I</span>
+        <h3>Diagnóstico</h3>
+        <p>We start by locating exactly where you sit against the IB grade descriptors — no guessing, no generic placement test.</p>
+      </div>
+      <div class="session">
+        <span class="roman">II</span>
+        <h3>Práctica dirigida</h3>
+        <p>Weekly sessions targeting the specific skill gaps found in step one, using your school's own set texts and themes.</p>
+      </div>
+      <div class="session">
+        <span class="roman">III</span>
+        <h3>Simulación de examen</h3>
+        <p>Timed, marked past papers under real conditions in the run-up to May or November, with examiner-style feedback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-band section-pad" id="results">
+  <div class="wrap">
+    <div class="section-head" style="max-width:60ch;">
+      <span class="eyebrow" style="color:var(--gold);">03 — Track record</span>
+      <h2 style="color:var(--white);">Numbers from students taught across Dubai's IB schools.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat"><b>9 yrs</b><span>teaching Spanish to school &amp; college students</span></div>
+      <div class="stat"><b>4.9/5</b><span>rating across 14 tutoring reviews</span></div>
+      <div class="stat"><b>6</b><span>curricula taught: IB, CBSE, AP, ICSE, IGCSE, HKDSE</span></div>
+      <div class="stat"><b>A1–C2</b><span>levels covered, beginner through proficient</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section-pad" id="stories">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">04 — From families in Dubai</span>
+      <h2>What changed for other students.</h2>
+    </div>
+    <div class="postcards">
+      <div class="postcard">
+        <p class="quote">My daughter has been learning Spanish with Nishita ma’am since Class 6, and the progress she has made over the years has been truly remarkable. She has consistently scored between 95–99%, & she has developed a genuine interest and confidence in the language.
+
+Nishita Ma’am has loved my daughter build love for the subject.
+
+Thanks to her guidance, I feel my daughter is now confident enough to even appear for higher-level Spanish exams.
+I highly recommend Language Milano for superb results!</p>
+        <div class="who">Esha tewari, Mother</div>
+      </div>
+      <div class="postcard">
+        <p class="quote">We’ve had the privilege of working with Nishitta Ma’am for the past two years, and her impact on my son’s Spanish journey has been exceptional.
+
+What stands out most is the way she blends structure with genuine warmth. She creates an environment where learning feels natural, engaging, and quietly rigorous. Today, my son is fully immersed in Spanish, and that shift has everything to do with her steady guidance and thoughtful teaching style.
+
+Her clarity, consistency, and deep commitment to her students make her an outstanding educator. I recommend her wholeheartedly to any family looking for high‑quality, meaningful Spanish instruction.</p>
+        <div class="who">Ruchi kappor, Mother</div>
+      </div>
+      <div class="postcard">
+        <p class="quote">My child has been learning Spanish with Miss Nishita from quite sometime now and I must say that she is an exceptionally knowledgeable teacher for teaching Spanish.My child had zero knowledge of Spanish when she started with Nishitta Mam,however I am proud of the progress she has made.My daughter now speaks Spanish confidently and with ease,she has good grip on the pronunciation and sentences.</p>
+        <div class="who">Aparajeeta Saikia, Mom</div>
+      </div>
+    </div>
+    <p style="margin-top:28px; font-size:0.86rem; color:rgba(20,20,20,0.6);">Reviews paraphrased from Nishita's public tutoring profile on UrbanPro, where she holds a 4.9/5 rating across 14 reviews. Google review quotes to be added once shared.</p>
+  </div>
+</section>
+
+<section class="contact-band section-pad" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">05 — Get in touch</span>
+      <h2>Book a trial class.</h2>
+      <p>A trial session is a real diagnostic, not a sales pitch — you'll leave it knowing exactly where you stand against the IB criteria.</p>
+      <div class="contact-detail">
+        <div><span class="label">Teacher</span>Nishita Chauhan, based in Noida, India</div>
+        <div><span class="label">WhatsApp</span><a href="https://wa.me/918076319274" target="_blank" rel="noopener">+91 80763 19274 — chat to book a demo</a></div>
+        <div><span class="label">Hours</span>Sunday–Thursday, evenings GST (Noida is 1.5 hrs ahead of Dubai)</div>
+      </div>
+    </div>
     
-    <!--Cursor-->
-    <div class="cursor-dot-outline"></div>
-    <div class="cursor-dot"></div>
-    <!-- Dynamic footer section -->
+  </div>
+</section>
 
-
-    <!-- script -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/cursor.js"></script>
-    <script src="assets/js/research.js"></script>
+<footer>
+  <div class="wrap foot-row">
+    <p>© 2026 Habla IB · Independent Spanish tuition with Nishita Chauhan, taught online to students in Dubai and worldwide</p>
+    <p>IB, MYP and DP are trademarks of the International Baccalaureate Organization, which is not affiliated with this service.</p>
+  </div>
+</footer>
 
 </body>
-
 </html>

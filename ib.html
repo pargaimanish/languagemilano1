@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language milano — Spanish for the IB Diploma, Online Worldwide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#141414;
+    --paprika:#2A2A2A;
+    --gold:#6E6E6E;
+    --sand:#EBEBEB;
+    --teal:#4A4A4A;
+    --white:#FFFFFF;
+    --paper: #FAFAFA;
+    --line: rgba(20,20,20,0.14);
+    --radius: 6px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow, .stamp-code{
+    font-family:'Space Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+  }
+  a{ color:inherit; }
+  img,svg{ display:block; max-width:100%; }
+  .wrap{ max-width:1160px; margin:0 auto; padding:0 32px; }
+  section{ position:relative; }
+
+  /* subtle Alhambra 8-point star tile pattern, used sparingly */
+  .tile-pattern{
+    background-image:
+      radial-gradient(circle at 0 0, transparent 9px, var(--line) 9.5px, var(--line) 10px, transparent 10.5px),
+      radial-gradient(circle at 40px 40px, transparent 9px, var(--line) 9.5px, var(--line) 10px, transparent 10.5px);
+    background-size:40px 40px;
+  }
+
+  :focus-visible{ outline:2px solid var(--paprika); outline-offset:3px; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,236,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem;
+  }
+  .logo .mark{
+    width:30px; height:30px; flex-shrink:0;
+  }
+  nav.links{ display:flex; gap:30px; align-items:center; }
+  nav.links a{
+    text-decoration:none; font-size:0.92rem; font-weight:500; color:var(--ink);
+    opacity:0.75; transition:opacity .15s;
+  }
+  nav.links a:hover{ opacity:1; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Work Sans', sans-serif; font-weight:600; font-size:0.9rem;
+    padding:11px 20px; border-radius:999px; border:1px solid var(--ink);
+    text-decoration:none; cursor:pointer; background:none;
+  }
+  .btn-solid{ background:var(--paprika); border-color:var(--paprika); color:var(--white); }
+  .btn-solid:hover{ background:#98301F; }
+  .btn-ghost:hover{ background:var(--ink); color:var(--white); }
+
+  /* ---------- mobile menu (checkbox-driven, no JS) ---------- */
+  #menu-toggle{ display:none; }
+  .burger{
+    display:none; width:38px; height:38px; border-radius:8px; border:1px solid var(--ink);
+    align-items:center; justify-content:center; cursor:pointer; background:none; flex-shrink:0;
+  }
+  .burger svg{ width:18px; height:18px; }
+  .mobile-book{ display:none; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:88px 0 60px; overflow:hidden; }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .hero .eyebrow{ color:var(--paprika); }
+  .hero h1{
+    font-size:clamp(2.4rem, 4.6vw, 3.6rem);
+    line-height:1.05;
+    margin-top:18px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--paprika); }
+  .hero p.lede{
+    max-width:46ch; margin-top:22px; font-size:1.08rem; color:rgba(27,42,68,0.78);
+  }
+  .hero-ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; }
+
+  .stamp-cluster{ position:relative; height:380px; }
+  .stamp{
+    position:absolute; border-radius:50%; border:2px solid currentColor;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-family:'Space Mono', monospace; text-transform:uppercase;
+    letter-spacing:0.06em; padding:14px;
+    transform:rotate(var(--r, -8deg));
+    background:var(--paper);
+  }
+  .stamp::before{
+    content:""; position:absolute; inset:6px; border:1px dashed currentColor; border-radius:50%; opacity:0.6;
+  }
+  .stamp-1{ width:210px; height:210px; top:0; left:20px; color:var(--paprika); font-size:0.78rem; --r:-9deg; }
+  .stamp-2{ width:160px; height:160px; top:150px; right:10px; color:var(--teal); font-size:0.68rem; --r:7deg; }
+  .stamp-3{ width:130px; height:130px; bottom:0; left:80px; color:var(--gold); font-size:0.66rem; --r:4deg; }
+
+  /* ---------- ticker ---------- */
+  .ticker-band{
+    background:var(--ink); color:var(--sand); padding:14px 0; overflow:hidden;
+  }
+  .ticker-track{
+    display:flex; gap:48px; white-space:nowrap; width:max-content;
+    animation: scroll 26s linear infinite;
+    font-family:'Space Mono', monospace; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+  }
+  .ticker-track span{ opacity:0.85; }
+  @keyframes scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){ .ticker-track{ animation:none; } }
+
+  /* ---------- section headers ---------- */
+  .section-head{ max-width:56ch; margin-bottom:44px; }
+  .section-head .eyebrow{ color:var(--teal); }
+  .section-head h2{ font-size:clamp(1.7rem,3vw,2.3rem); margin-top:14px; }
+  .section-pad{ padding:96px 0; }
+  .divider{ border:none; border-top:1px solid var(--line); margin:0; }
+
+  /* ---------- programme cards (exam-paper styling) ---------- */
+  .paper-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+  }
+  .paper-card{
+    background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px 22px; position:relative;
+  }
+  .paper-card .stamp-code{ color:var(--paprika); }
+  .paper-card h3{ font-size:1.15rem; margin-top:14px; }
+  .paper-card p{ margin:10px 0 0; font-size:0.9rem; color:rgba(27,42,68,0.72); }
+  .paper-card .tag{
+    position:absolute; top:22px; right:22px; font-family:'Space Mono',monospace;
+    font-size:0.68rem; color:var(--gold); border:1px solid var(--gold); border-radius:999px;
+    padding:3px 9px;
+  }
+
+  /* ---------- approach: three sessions ---------- */
+  .session-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+  .session{ padding:36px 30px; background:var(--white); border-left:1px solid var(--line); }
+  .session:first-child{ border-left:none; }
+  .session .roman{ font-family:'Fraunces',serif; font-size:2.4rem; color:var(--sand); -webkit-text-stroke:1.5px var(--paprika); color:transparent; line-height:1; }
+  .session h3{ margin-top:16px; font-size:1.15rem; }
+  .session p{ font-size:0.92rem; color:rgba(27,42,68,0.72); margin-top:10px; }
+
+  /* ---------- stats ---------- */
+  .stats-band{ background:var(--ink); color:var(--sand); }
+  .stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:30px; text-align:left; }
+  .stat b{ font-family:'Fraunces',serif; font-size:2.6rem; display:block; color:var(--white); }
+  .stat span{ font-size:0.86rem; opacity:0.75; }
+
+  /* ---------- testimonials (postcards) ---------- */
+  .postcards{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .postcard{
+    background:var(--white); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; position:relative;
+  }
+  .postcard::after{
+    content:"✈"; position:absolute; top:22px; right:22px; color:var(--teal); font-size:1.1rem; opacity:0.7;
+  }
+  .postcard p.quote{ font-family:'Fraunces',serif; font-style:italic; font-size:1.05rem; line-height:1.5; }
+  .postcard .who{ margin-top:18px; font-size:0.84rem; color:rgba(27,42,68,0.65); font-family:'Space Mono',monospace; }
+
+  /* ---------- contact ---------- */
+  .contact-band{ background:var(--sand); }
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+  .contact-info .eyebrow{ color:var(--paprika); }
+  .contact-info h2{ margin-top:14px; font-size:clamp(1.7rem,3vw,2.2rem); }
+  .contact-info p{ margin-top:16px; max-width:42ch; color:rgba(27,42,68,0.78); }
+  .contact-detail{ margin-top:28px; font-size:0.92rem; }
+  .contact-detail div{ margin-bottom:10px; }
+  .contact-detail .label{ font-family:'Space Mono',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); display:block; }
+
+  form{ background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:32px; }
+  .field{ margin-bottom:18px; }
+  .field label{ display:block; font-size:0.82rem; margin-bottom:6px; font-weight:500; }
+  .field input, .field select, .field textarea{
+    width:100%; padding:11px 13px; border:1px solid var(--line); border-radius:4px;
+    font-family:'Work Sans', sans-serif; font-size:0.95rem; background:var(--paper); color:var(--ink);
+  }
+  .field textarea{ min-height:90px; resize:vertical; }
+  form .btn-solid{ width:100%; justify-content:center; margin-top:6px; }
+
+  footer{ padding:40px 0; border-top:1px solid var(--line); }
+  .foot-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .foot-row p{ font-size:0.82rem; color:rgba(27,42,68,0.6); margin:0; }
+
+  /* ---------- responsive ---------- */
+  .teacher-grid{ display:grid; grid-template-columns:200px 1fr; gap:40px; align-items:start; }
+  .teacher-photo{ width:180px; height:180px; border-radius:50%; overflow:hidden; border:2px solid var(--ink); flex-shrink:0; margin:0 auto; }
+  .teacher-photo img{ width:100%; height:100%; object-fit:cover; object-position:center 20%; filter:grayscale(1) contrast(1.05); }
+  .teacher-stats{ display:flex; gap:28px; margin-top:24px; flex-wrap:wrap; }
+
+  @media (max-width:900px){
+    .hero{ padding:32px 0 48px; }
+    .hero-grid{ grid-template-columns:1fr; gap:32px; }
+    .stamp-cluster{ height:260px; margin-top:6px; }
+    .paper-grid{ grid-template-columns:repeat(2,1fr); }
+    .session-row{ grid-template-columns:1fr; }
+    .session{ border-left:none; border-top:1px solid var(--line); }
+    .session:first-child{ border-top:none; }
+    .stats-grid{ grid-template-columns:repeat(2,1fr); }
+    .postcards{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; gap:36px; }
+    .section-pad{ padding:64px 0; }
+
+    /* nav collapses into a slide-down panel triggered by the burger */
+    nav.links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; align-items:stretch; gap:0;
+      background:var(--paper); border-bottom:1px solid var(--line);
+      padding:8px 20px 20px;
+    }
+    nav.links a{ padding:14px 0; border-bottom:1px solid var(--line); opacity:1; }
+    nav.links a:last-child{ border-bottom:none; margin-top:10px; }
+    #menu-toggle:checked ~ nav.links{ display:flex; }
+    .burger{ display:inline-flex; }
+    .mobile-book{ display:inline-flex; }
+
+    /* teacher bio stacks and centers on mobile */
+    .teacher-grid{ grid-template-columns:1fr; text-align:center; }
+    .teacher-grid p{ margin-left:auto; margin-right:auto; text-align:left; }
+    .teacher-stats{ justify-content:center; text-align:left; }
+  }
+  @media (max-width:560px){
+    .wrap{ padding:0 20px; }
+    .paper-grid{ grid-template-columns:1fr; }
+    .stats-grid{ grid-template-columns:1fr 1fr; }
+    .hero h1{ font-size:clamp(2rem, 8vw, 2.6rem); }
+    .hero-ctas{ flex-direction:column; align-items:stretch; }
+    .hero-ctas .btn{ justify-content:center; }
+    .teacher-photo{ width:140px; height:140px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <div class="logo">
+      <svg class="mark" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="8" fill="#141414"/>
+        <path d="M20 6 L26 14 L20 22 L14 14 Z" fill="#FAFAFA"/>
+        <path d="M20 18 L26 26 L20 34 L14 26 Z" fill="#8A8A8A"/>
+      </svg>
+      Languagemilano IB 
+    </div>
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a href="https://wa.me/918076319274" target="_blank" rel="noopener" class="btn btn-solid mobile-book" style="padding:8px 16px; font-size:0.82rem;">Book a trial</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="burger" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </label>
+    </div>
+    <nav class="links">
+      <a href="#teacher">Your teacher</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#approach">Approach</a>
+      <a href="#stories">Stories</a>
+      <a href="https://wa.me/918076319274" target="_blank" rel="noopener" class="btn btn-solid" style="padding:9px 18px;">Book a trial class</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Spanish · IB MYP &amp; DP · Live online, worldwide</span>
+      <h1>Fluent en español.<br>Ready for <em>the exam.</em></h1>
+      <p class="lede">One-to-one Spanish tuition with Nishita Chauhan, taught live over Zoom to IB students around the world — built around your actual syllabus, your actual school, and the paper you'll sit in May or November.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/918076319274" target="_blank" rel="noopener" class="btn btn-solid">Book a trial class</a>
+        <a href="#teacher" class="btn btn-ghost">Meet your teacher</a>
+      </div>
+    </div>
+    <div class="stamp-cluster" aria-hidden="true">
+      <div class="stamp stamp-1">9 yrs<br>teaching<br>IB Spanish</div>
+      <div class="stamp stamp-2">MYP<br>Phases 1–6</div>
+      <div class="stamp stamp-3">Live<br>via Zoom<br>worldwide</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker-band" aria-hidden="true">
+  <div class="ticker-track">
+    <span>MYP Language Acquisition, Phases 1–6</span>
+    <span>DP Spanish Ab Initio</span>
+    <span>DP Spanish B, SL &amp; HL</span>
+    <span>DP Spanish A: Language &amp; Literature</span>
+    <span>Individual Oral prep</span>
+    <span>Paper 1 · Paper 2 · IA</span>
+    <span>MYP Language Acquisition, Phases 1–6</span>
+    <span>DP Spanish Ab Initio</span>
+    <span>DP Spanish B, SL &amp; HL</span>
+    <span>DP Spanish A: Language &amp; Literature</span>
+    <span>Individual Oral prep</span>
+    <span>Paper 1 · Paper 2 · IA</span>
+  </div>
+</div>
+
+<section class="section-pad" id="teacher">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Meet your teacher</span>
+      <h2>Nishita Chauhan</h2>
+    </div>
+    <div class="teacher-grid">
+      <div class="teacher-photo">
+        <img src="https://res.cloudinary.com/djrucljh0/image/upload/v1787387281/teacher_ehgnsj.jpg" alt="Nishita Chauhan, Spanish teacher" loading="lazy">
+      </div>
+      <div>
+        <p style="max-width:60ch; font-size:1.02rem;">Nishita has spent close to a decade teaching Spanish to school and college students, working professionals, and hobby learners alike, with a particular focus on students following the IB, CBSE, AP, ICSE, IGCSE and HKDSE curricula. She holds a B.Com from Delhi University and teaches in Hindi, English and Spanish, currently based in Noida, India, and working with students online via Zoom worldwide — including families across time zones preparing for MYP and DP exam sessions.</p>
+        <p style="max-width:60ch; font-size:1.02rem; margin-top:14px;">Her approach centres on pairing language instruction with Spanish culture, so students build genuine comfort with the language rather than memorising it for a single paper. She has prepared students from schools including Delhi Public School, Shiv Nadar School, GD Goenka, Pathways School Noida, Modern School and Bangalore International School, and rates 4.9 out of 5 across her tutoring reviews.</p>
+        <div class="teacher-stats">
+          <div><span class="stamp-code" style="color:var(--paprika);">Experience</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">9 years</div></div>
+          <div><span class="stamp-code" style="color:var(--paprika);">Levels</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">A1 – C2</div></div>
+          <div><span class="stamp-code" style="color:var(--paprika);">Rating</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">4.9 / 5</div></div>
+          <div><span class="stamp-code" style="color:var(--paprika);">Delivery</span><div style="font-family:'Fraunces',serif; font-size:1.3rem; margin-top:4px;">Live, via Zoom</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section-pad" id="programmes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">01 — The syllabus, decoded</span>
+      <h2>Every IB Spanish component, covered on its own terms.</h2>
+    </div>
+    <div class="paper-grid">
+      <div class="paper-card">
+        <span class="tag">SL / HL</span>
+        <span class="stamp-code">Paper 1</span>
+        <h3>Receptive skills</h3>
+        <p>Reading and listening comprehension across the five IB themes, drilled with real past-paper texts.</p>
+      </div>
+      <div class="paper-card">
+        <span class="tag">SL / HL</span>
+        <span class="stamp-code">Paper 2</span>
+        <h3>Productive writing</h3>
+        <p>Text-type mastery — blogs, formal letters, essays — matched to the command terms examiners actually use.</p>
+      </div>
+      <div class="paper-card">
+        <span class="tag">All levels</span>
+        <span class="stamp-code">IO</span>
+        <h3>Individual Oral</h3>
+        <p>Stimulus analysis and conversation practice until spontaneous speech stops feeling rehearsed.</p>
+      </div>
+      <div class="paper-card">
+        <span class="tag">Ab Initio</span>
+        <span class="stamp-code">Foundations</span>
+        <h3>From zero to confident</h3>
+        <p>Structured grammar and vocabulary building for students starting Spanish with no prior study.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section-pad tile-pattern" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">02 — How the sessions work</span>
+      <h2>A method built like the exam itself: three passes, not one long grind.</h2>
+    </div>
+    <div class="session-row">
+      <div class="session">
+        <span class="roman">I</span>
+        <h3>Diagnóstico</h3>
+        <p>We start by locating exactly where you sit against the IB grade descriptors — no guessing, no generic placement test.</p>
+      </div>
+      <div class="session">
+        <span class="roman">II</span>
+        <h3>Práctica dirigida</h3>
+        <p>Weekly sessions targeting the specific skill gaps found in step one, using your school's own set texts and themes.</p>
+      </div>
+      <div class="session">
+        <span class="roman">III</span>
+        <h3>Simulación de examen</h3>
+        <p>Timed, marked past papers under real conditions in the run-up to May or November, with examiner-style feedback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-band section-pad" id="results">
+  <div class="wrap">
+    <div class="section-head" style="max-width:60ch;">
+      <span class="eyebrow" style="color:var(--gold);">03 — Track record</span>
+      <h2 style="color:var(--white);">Numbers from students taught across IB schools worldwide.</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat"><b>9 yrs</b><span>teaching Spanish to school &amp; college students</span></div>
+      <div class="stat"><b>4.9/5</b><span>rating across 14 tutoring reviews</span></div>
+      <div class="stat"><b>6</b><span>curricula taught: IB, CBSE, AP, ICSE, IGCSE, HKDSE</span></div>
+      <div class="stat"><b>A1–C2</b><span>levels covered, beginner through proficient</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section-pad" id="stories">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">04 — From families around the world</span>
+      <h2>What changed for other students.</h2>
+    </div>
+    <div class="postcards">
+      <div class="postcard">
+        <p class="quote">My daughter has been learning Spanish with Nishita ma’am since Class 6, and the progress she has made over the years has been truly remarkable. She has consistently scored between 95–99%, & she has developed a genuine interest and confidence in the language.
+
+Nishita Ma’am has loved my daughter build love for the subject.
+
+Thanks to her guidance, I feel my daughter is now confident enough to even appear for higher-level Spanish exams.
+I highly recommend Language Milano for superb results!</p>
+        <div class="who">Esha tewari, Mother</div>
+      </div>
+      <div class="postcard">
+        <p class="quote">We’ve had the privilege of working with Nishitta Ma’am for the past two years, and her impact on my son’s Spanish journey has been exceptional.
+
+What stands out most is the way she blends structure with genuine warmth. She creates an environment where learning feels natural, engaging, and quietly rigorous. Today, my son is fully immersed in Spanish, and that shift has everything to do with her steady guidance and thoughtful teaching style.
+
+Her clarity, consistency, and deep commitment to her students make her an outstanding educator. I recommend her wholeheartedly to any family looking for high‑quality, meaningful Spanish instruction.</p>
+        <div class="who">Ruchi kappor, Mother</div>
+      </div>
+      <div class="postcard">
+        <p class="quote">My child has been learning Spanish with Miss Nishita from quite sometime now and I must say that she is an exceptionally knowledgeable teacher for teaching Spanish.My child had zero knowledge of Spanish when she started with Nishitta Mam,however I am proud of the progress she has made.My daughter now speaks Spanish confidently and with ease,she has good grip on the pronunciation and sentences.</p>
+        <div class="who">Aparajeeta Saikia, Mom</div>
+      </div>
+    </div>
+    <p style="margin-top:28px; font-size:0.86rem; color:rgba(20,20,20,0.6);">Reviews paraphrased from Nishita's public tutoring profile on UrbanPro, where she holds a 4.9/5 rating across 14 reviews. Google review quotes to be added once shared.</p>
+  </div>
+</section>
+
+<section class="contact-band section-pad" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">05 — Get in touch</span>
+      <h2>Book a trial class.</h2>
+      <p>A trial session is a real diagnostic, not a sales pitch — you'll leave it knowing exactly where you stand against the IB criteria.</p>
+      <div class="contact-detail">
+        <div><span class="label">Teacher</span>Nishita Chauhan, based in Noida, India</div>
+        <div><span class="label">WhatsApp</span><a href="https://wa.me/918076319274" target="_blank" rel="noopener">+91 80763 19274 — chat to book a demo</a></div>
+        <div><span class="label">Availability</span>Sunday–Thursday, evenings IST — flexible slots to suit most time zones worldwide</div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <p>© 2026 Habla IB · Independent Spanish tuition with Nishita Chauhan, taught online to IB students worldwide</p>
+    <p>IB, MYP and DP are trademarks of the International Baccalaureate Organization, which is not affiliated with this service.</p>
+  </div>
+</footer>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://languagemilano.com/#organization",
+      "name": "Habla IB — Language Milano",
+      "description": "One-to-one Spanish tuition for IB MYP and DP students, taught live online by Nishita Chauhan to students worldwide.",
+      "url": "https://languagemilano.com/",
+      "telephone": "+918076319274",
+      "priceRange": "$$",
+      "areaServed": "Worldwide",
+      "founder": { "@id": "https://languagemilano.com/tutor_teacher_spanish_ib_dubai.html#teacher" },
+      "employee": { "@id": "https://languagemilano.com/tutor_teacher_spanish_ib_dubai.html#teacher" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "14",
+        "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Esha Tewari" },
+          "reviewBody": "My daughter has learned Spanish with Nishita since Class 6 and has consistently scored between 95–99%, developing genuine confidence in the language."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Ruchi Kapoor" },
+          "reviewBody": "Over two years, Nishita blended structure with warmth, creating an environment where learning felt natural and quietly rigorous."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Aparajeeta Saikia" },
+          "reviewBody": "My daughter started with zero Spanish knowledge and now speaks confidently, with a good grip on pronunciation and sentence structure."
+        }
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@id": "https://languagemilano.com/#course-myp" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://languagemilano.com/#course-abinitio" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://languagemilano.com/#course-b" } },
+        { "@type": "Offer", "itemOffered": { "@id": "https://languagemilano.com/#course-a" } }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://languagemilano.com/tutor_teacher_spanish_ib_dubai.html#teacher",
+      "name": "Nishita Chauhan",
+      "jobTitle": "Spanish Teacher",
+      "description": "Spanish teacher with 9 years of experience teaching IB, CBSE, AP, ICSE, IGCSE and HKDSE curricula, holding a B.Com from Delhi University.",
+      "url": "https://languagemilano.com/tutor_teacher_spanish_ib_dubai.html#teacher",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Delhi University"
+      },
+      "knowsLanguage": ["es", "en", "hi"],
+      "worksFor": { "@id": "https://languagemilano.com/#organization" }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://languagemilano.com/#course-myp",
+      "name": "IB MYP Language Acquisition (Phases 1–6)",
+      "description": "Structured Spanish tuition aligned to the IB Middle Years Programme language acquisition phases.",
+      "provider": { "@id": "https://languagemilano.com/#organization" }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://languagemilano.com/#course-abinitio",
+      "name": "IB DP Spanish Ab Initio",
+      "description": "Foundational Spanish course for IB Diploma students with no prior study of the language.",
+      "provider": { "@id": "https://languagemilano.com/#organization" }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://languagemilano.com/#course-b",
+      "name": "IB DP Spanish B (SL & HL)",
+      "description": "IB Diploma Spanish B tuition covering Paper 1, Paper 2, and Individual Oral preparation at Standard and Higher Level.",
+      "provider": { "@id": "https://languagemilano.com/#organization" }
+    },
+    {
+      "@type": "Course",
+      "@id": "https://languagemilano.com/#course-a",
+      "name": "IB DP Spanish A: Language & Literature",
+      "description": "IB Diploma Spanish A course tuition for language and literature study.",
+      "provider": { "@id": "https://languagemilano.com/#organization" }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

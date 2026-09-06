@@ -598,6 +598,23 @@ Her clarity, consistency, and deep commitment to her students make her an outsta
 
   gtag('config', 'AW-11044698572');
 </script>
+  <!-- Event snippet for Book appointment conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11044698572/LfZDCMToxe8cEMzzwpIp',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 
 </body>
 </html>
